@@ -6,6 +6,9 @@ extension DateTimeTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__DateTimeTests = [
+        ("testConvertingEpochToInterval", testConvertingEpochToInterval),
+        ("testConvertingEpochWithOffsetToInterval", testConvertingEpochWithOffsetToInterval),
+        ("testConvertingMomentToInterval", testConvertingMomentToInterval),
         ("testDeserialization", testDeserialization),
         ("testGetters", testGetters),
         ("testSerialization", testSerialization),
@@ -54,6 +57,7 @@ extension TimeOffsetTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__TimeOffsetTests = [
+        ("testConvertingToSeconds", testConvertingToSeconds),
         ("testDeserialization", testDeserialization),
         ("testInvalidation", testInvalidation),
         ("testSerialization", testSerialization),
