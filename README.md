@@ -21,7 +21,7 @@ date?.time.secondFraction // [9, 9, 9, 9, 9, 9]
 
 But why not just ues `Foundation.Date`, you ask?
 
-Turns out, time is a hard to represent if you account for different calendars
+Turns out, time is hard to represent if you account for different calendars
 and timezones. But sometimes it's legitimate to ignore this problem. That's why
 [RFC 3339][] exists: "to improve consistency and interoperability when
 representing and using date and time in Internet protocols." Suffice to say,
