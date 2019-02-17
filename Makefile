@@ -17,3 +17,9 @@ test:
 
 xcode:
 	@swift package generate-xcodeproj
+
+test-docker:
+	@Scripts/run-tests-linux-docker.sh
+
+develop-docker:
+	@Scripts/develop-linux-docker.sh
