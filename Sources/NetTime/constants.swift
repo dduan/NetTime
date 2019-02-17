@@ -1,0 +1,11 @@
+let zero = "0".utf8CString[0]
+let dash = "-".utf8CString[0]
+let dot = ".".utf8CString[0]
+let colon = ":".utf8CString[0]
+let t = "t".utf8CString[0]
+let T = "T".utf8CString[0]
+let space = " ".utf8CString[0]
+let z = "z".utf8CString[0]
+let Z = "Z".utf8CString[0]
+let minus = dash
+let plus = "+".utf8CString[0]
