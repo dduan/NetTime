@@ -40,6 +40,10 @@ extension TimeOffset {
         self.init(asciiValues: Array(rfc3339String.utf8CString.dropLast()))
     }
 
+    public init(staticRFC3339String string: StaticString) {
+        self.init(rfc3339String: string.description)!
+    }
+
     init?(asciiValues: [Int8]) {
         if asciiValues.count == 1, let first = asciiValues.first, first == z || first == Z {
             self.sign = .plus
