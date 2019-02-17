@@ -13,13 +13,13 @@ Each type is capable of serializing and deserializing from strings format
 specified in [RFC 3339][].
 
 ```swift
-if let date = DateTime(rfc3339String: "1979-05-27T00:32:00.999999-07:00") {
-    date.time.secondFraction // [9, 9, 9, 9, 9, 9]
+let date = DateTime(staticRFC3339String: "1979-05-27T00:32:00.999999-07:00")
+// Original representation is preserved. For example:
+date.time.secondFraction // [9, 9, 9, 9, 9, 9]
 
-    // Use it with Foundation:
-    Foundation.Date(timeIntervalSince1970: date.timeIntervalSince1970)
-    Foundation.TimeZone(secondsFromGMT: date.utcOffset.asSeconds)
-}
+// Use it with Foundation:
+Foundation.Date(timeIntervalSince1970: date.timeIntervalSince1970)
+Foundation.TimeZone(secondsFromGMT: date.utcOffset.asSeconds)
 ```
 
 ## Why?
