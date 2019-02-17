@@ -35,7 +35,7 @@ seconds was? Tough luck. NetTime preserves all information in an RFC
 
 ## Caution
 
-*DO NOT USE* NetTime's data types as direct source for time displayed to end
+**Do not use** NetTime's data types as direct source for time displayed to end
 users. Use something like `Foundation.DateFormatter` and follow best practices.
 Never assume you know enough about timezones and/or calendars to format date
 string!
