@@ -21,6 +21,18 @@ public struct TimeOffset: Equatable {
     public static var zero: TimeOffset {
         return TimeOffset(sign: .plus, hour: 0, minute: 0)!
     }
+
+    public var asSeconds: Int {
+        let factor: Int
+        switch self.sign {
+        case .plus:
+            factor = 1
+        case .minus:
+            factor = -1
+        }
+
+        return factor * Int(self.minute) * 60 + Int(self.hour) * 3600
+    }
 }
 
 extension TimeOffset {

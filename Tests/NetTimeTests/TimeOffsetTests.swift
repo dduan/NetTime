@@ -44,4 +44,9 @@ final class TimeOffsetTests: XCTestCase {
             TimeOffset(sign: .minus, hour: 59, minute: 1)
         )
     }
+
+    func testConvertingToSeconds() {
+        XCTAssertEqual(TimeOffset(sign: .minus, hour: 0, minute: 1)?.asSeconds, -60)
+        XCTAssertEqual(TimeOffset(sign: .plus, hour: 1, minute: 0)?.asSeconds, 3600)
+    }
 }
