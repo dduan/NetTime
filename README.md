@@ -2,11 +2,11 @@
 
 NetTime is a small collection of data types that represent date and time:
 
-- *LocalTime*: A time of day without relationship to date or timezone.
-- *LocalDate*: A date that represent an entire day in any timezone or calendar.
-- *LocalDateTime*: A time and date independent of timezones and calendars.
-- *TimeOffset*: Amount of hours and minutes difference from a timezone.
-- *DateTime*: A moment in time, expressed in relationship to UTC in Gregorian
+- **LocalTime**: A time of day without relationship to date or timezone.
+- **LocalDate**: A date that represent an entire day in any timezone or calendar.
+- **LocalDateTime**: A time and date independent of timezones and calendars.
+- **TimeOffset**: Amount of hours and minutes difference from a timezone.
+- **DateTime**: A moment in time, expressed in relationship to UTC in Gregorian
   calendar, in the current era, between 0000AD and 9999AD.
 
 Each type is capable of serializing and deserializing from strings format
