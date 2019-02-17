@@ -61,4 +61,28 @@ final class DateTimeTests: XCTestCase {
         let dateTime2 = DateTime(date: date, time: time2, utcOffset: offset)
         XCTAssertEqual(DateTime(rfc3339String: "2018-02-17T02:22:55.123+02:02"), dateTime2)
     }
+
+    func testConvertingEpochToInterval() {
+        guard let moment = DateTime(rfc3339String: "1970-01-01T00:00:00+00:00") else {
+            XCTFail("Parsing failure")
+            return
+        }
+        XCTAssertEqual(moment.timeIntervalSince1970, 0, accuracy: .ulpOfOne)
+    }
+
+    func testConvertingEpochWithOffsetToInterval() {
+        guard let moment = DateTime(rfc3339String: "1970-01-01T00:01:00+00:01") else {
+            XCTFail("Parsing failure")
+            return
+        }
+        XCTAssertEqual(moment.timeIntervalSince1970, 0, accuracy: .ulpOfOne)
+    }
+
+    func testConvertingMomentToInterval() {
+        guard let moment = DateTime(rfc3339String: "1970-01-01T01:01:00.123+00:01") else {
+            XCTFail("Parsing failure")
+            return
+        }
+        XCTAssertEqual(moment.timeIntervalSince1970, 3600.123, accuracy: .ulpOfOne)
+    }
 }

@@ -40,3 +40,27 @@ extension DateTime: CustomStringConvertible {
         return "\(self.date)T\(self.time)\(self.utcOffset)"
     }
 }
+
+#if os(Linux)
+import Glibc
+#else
+import Darwin
+#endif
+
+extension DateTime {
+    public var timeIntervalSince1970: Double {
+        var time = tm()
+        time.tm_year = Int32(self.year - 1900)
+        time.tm_mon = Int32(self.month) - 1
+        time.tm_mday = Int32(self.day)
+        time.tm_hour = Int32(self.hour)
+        time.tm_min = Int32(self.minute)
+        time.tm_sec = Int32(self.second)
+
+
+        let localSeconds = mktime(&time)
+        let wholeSeconds = Double(localSeconds - self.utcOffset.asSeconds + time.tm_gmtoff)
+        let fraction: Double = self.time.secondFraction.reversed().reduce(0) { ($0 + Double($1)) / 10 }
+        return wholeSeconds + fraction
+    }
+}
