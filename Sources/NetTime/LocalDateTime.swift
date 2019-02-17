@@ -15,6 +15,10 @@ extension LocalDateTime {
         self.init(asciiValues: Array(rfc3339String.utf8CString.dropLast()))
     }
 
+    public init(staticRFC3339String string: StaticString) {
+        self.init(rfc3339String: string.description)!
+    }
+
     init?(asciiValues: [Int8]) {
         guard asciiValues.count >= 19,
             case let separator = asciiValues[10],

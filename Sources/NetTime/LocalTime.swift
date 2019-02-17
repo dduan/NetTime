@@ -45,6 +45,10 @@ extension LocalTime {
         self.init(asciiValues: Array(rfc3339String.utf8CString.dropLast()))
     }
 
+    public init(staticRFC3339String string: StaticString) {
+        self.init(rfc3339String: string.description)!
+    }
+
     init?(asciiValues: [Int8]) {
         guard asciiValues.count >= 8, asciiValues[2] == colon && asciiValues[5] == colon else  {
             return nil
