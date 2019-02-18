@@ -9,7 +9,18 @@ matrix:
       script:
         - make test-docker
     - os: osx
-      language: objective-c
-      osx_image: xcode10.2
-      script:
-        - make test
+      env: ACTION=SwiftPM
+    - os: osx
+      env: ACTION=iOS
+    - os: osx
+      env: ACTION=macOS
+    - os: osx
+      env: ACTION=tvOS
+    - os: osx
+      env: ACTION=carthage
+
+language: objective-c
+osx_image: xcode10.1
+
+script:
+  - make install-$ACTION && make test-$ACTION
