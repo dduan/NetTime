@@ -15,14 +15,19 @@ update-linux-test-manifest:
 test:
 	@swift test -Xswiftc -warnings-as-errors
 
-xcode:
-	@swift package generate-xcodeproj
-
 test-docker:
 	@Scripts/run-tests-linux-docker.sh
 
 develop-docker:
 	@Scripts/develop-linux-docker.sh
+
+carthage-archive: clean-carthage install-carthage
+	@carthage build --archive
+
+clean-carthage:
+	@echo "Deleting Carthage artifacts…"
+	@rm -rf Carthage
+	@rm -rf Pathos.framework.zip
 
 install-%:
 	true
