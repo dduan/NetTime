@@ -90,7 +90,24 @@ import Darwin
 extension DateTime {
     /// Number of seconds, including as much sub-second precesion as possible,
     /// from 1970-01-01 00:00:00+00:00.
+    ///
+    /// Note: if you need to convert to a `Foundation.Date`, please consider
+    ///       using `DateTime.timeIntervalSince2001`.
     public var timeIntervalSince1970: Double {
+        return Double(self.wholeSecondsSince1970) + self.fractionalSeconds
+    }
+
+    /// Number of seconds, including as much sub-second precesion as possible,
+    /// from 2001-01-01 00:00:00+00:00.
+    ///
+    /// Note: 2001-01-01 is `Foundation.Date`'s epoch. Pass this value to
+    ///       `Foundatio.Date.init(timeIntervalSinceReferenceDate:)` if you need
+    ///       a conversion.
+    public var timeIntervalSince2001: Double {
+        return Double(self.wholeSecondsSince1970 - 978307200) + self.fractionalSeconds
+    }
+
+    private var wholeSecondsSince1970: Int {
         var time = tm()
         time.tm_year = Int32(self.year - 1900)
         time.tm_mon = Int32(self.month) - 1
@@ -101,8 +118,11 @@ extension DateTime {
 
 
         let localSeconds = mktime(&time)
-        let wholeSeconds = Double(localSeconds - self.utcOffset.asSeconds + time.tm_gmtoff)
-        let fraction: Double = self.time.secondFraction.reversed().reduce(0) { ($0 + Double($1)) / 10 }
-        return wholeSeconds + fraction
+        let wholeSeconds = localSeconds - self.utcOffset.asSeconds + time.tm_gmtoff
+        return wholeSeconds
+    }
+
+    private var fractionalSeconds: Double {
+        return self.time.secondFraction.reversed().reduce(0) { ($0 + Double($1)) / 10 }
     }
 }
