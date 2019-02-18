@@ -64,16 +64,16 @@ final class DateTimeTests: XCTestCase {
 
     func testConvertingEpochToInterval() {
         let moment = DateTime(staticRFC3339String: "1970-01-01T00:00:00+00:00")
-        XCTAssertEqual(moment.timeIntervalSince1970, 0, accuracy: .ulpOfOne)
+        XCTAssertEqual(moment.timeIntervalSince1970, 0)
     }
 
     func testConvertingEpochWithOffsetToInterval() {
         let moment = DateTime(staticRFC3339String: "1970-01-01T00:01:00+00:01")
-        XCTAssertEqual(moment.timeIntervalSince1970, 0, accuracy: .ulpOfOne)
+        XCTAssertEqual(moment.timeIntervalSince1970, 0)
     }
 
     func testConvertingMomentToInterval() {
         let moment = DateTime(staticRFC3339String: "1970-01-01T01:01:00.123+00:01")
-        XCTAssertEqual(moment.timeIntervalSince1970, 3600.123, accuracy: .ulpOfOne)
+        XCTAssertEqual(moment.timeIntervalSince1970, 3600.123, accuracy: 0.0001)
     }
 }
