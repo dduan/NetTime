@@ -76,4 +76,19 @@ final class DateTimeTests: XCTestCase {
         let moment = DateTime(staticRFC3339String: "1970-01-01T01:01:00.123+00:01")
         XCTAssertEqual(moment.timeIntervalSince1970, 3600.123, accuracy: 0.0001)
     }
+
+    func testConvertingNSDateEpochToInterval() {
+        let moment = DateTime(staticRFC3339String: "2001-01-01T00:00:00+00:00")
+        XCTAssertEqual(moment.timeIntervalSince2001, 0)
+    }
+
+    func testConvertingNSDateWithOffsetEpochToInterval() {
+        let moment = DateTime(staticRFC3339String: "2001-01-01T00:01:00+00:01")
+        XCTAssertEqual(moment.timeIntervalSince2001, 0)
+    }
+
+    func testConvertingNSDateMomentToInterval() {
+        let moment = DateTime(staticRFC3339String: "2001-01-01T01:01:00.123+00:01")
+        XCTAssertEqual(moment.timeIntervalSince2001, 3600.123, accuracy: 0.0001)
+    }
 }

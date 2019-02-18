@@ -20,7 +20,7 @@ date.time.secondFraction // [9, 9, 9, 9, 9, 9]
 date.description // 1979-05-27T00:32:00.999999-07:00
 
 // Use it with Foundation:
-Foundation.Date(timeIntervalSince1970: date.timeIntervalSince1970)
+Foundation.Date(timeIntervalSinceReferenceDate: date.timeIntervalSince2001)
 Foundation.TimeZone(secondsFromGMT: date.utcOffset.asSeconds)
 ```
 
