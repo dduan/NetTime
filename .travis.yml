@@ -3,6 +3,8 @@ matrix:
     - os: osx
       env: ACTION=carthage
     - os: osx
+      env: ACTION=CocoaPods
+    - os: osx
       env: ACTION=tvOS
     - os: osx
       env: ACTION=SwiftPM

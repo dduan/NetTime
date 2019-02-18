@@ -27,6 +27,9 @@ develop-docker:
 install-%:
 	true
 
+install-CocoaPods:
+	sudo gem install cocoapods -v 1.6.0
+
 install-carthage:
 	brew remove carthage --force || true
 	brew install carthage
@@ -69,3 +72,6 @@ test-carthage:
 	ls Carthage/build/iOS/NetTime.framework
 	ls Carthage/build/tvOS/NetTime.framework
 	ls Carthage/build/watchOS/NetTime.framework
+
+test-CocoaPods:
+	pod lib lint --verbose
