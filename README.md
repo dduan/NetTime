@@ -38,6 +38,28 @@ what timezone offset was used? what the intended precesion for the fraction of
 seconds was? Tough luck. NetTime preserves all information in an RFC
 3339-compliant timestamp.
 
+## Installation
+
+#### With [CocoaPods](http://cocoapods.org/)
+
+```ruby
+use_frameworks!
+
+pod "ModelMapper"
+```
+
+#### With [Carthage](https://github.com/Carthage/Carthage)
+
+```
+github "lyft/mapper"
+```
+
+#### With [SwiftPM](https://swift.org/package-manager)
+
+```
+.package(url: "http://github.com/dduan/NetTime", from: "0.0.2")
+```
+
 ## Caution
 
 **Do not use** NetTime's data types as direct source for time displayed to end
