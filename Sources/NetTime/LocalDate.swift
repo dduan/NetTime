@@ -7,7 +7,9 @@ extension SignedInteger {
         return self < 1 || self > 12
     }
 
-    fileprivate func isInvalidDay<Y: SignedInteger, M: SignedInteger>(inYear year: Y, month: M) -> Bool {
+    fileprivate func isInvalidDay<Y, M>(inYear year: Y, month: M) -> Bool
+        where Y: SignedInteger, M: SignedInteger
+    {
         let maxDayCount: Self
         let isLeapYear = year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)
         switch month {
@@ -23,13 +25,29 @@ extension SignedInteger {
     }
 }
 
+/// A date in Gregorian calendar, not specific to any timezone.
 public struct LocalDate: Equatable {
+    /// The year.
     public var year: Int16
+    /// The month.
     public var month: Int8
+    /// The day.
     public var day: Int8
 
-    public init?<Y, M, D>(year: Y, month: M, day: D) where Y: SignedInteger, M: SignedInteger, D: SignedInteger {
-        if year.isInvalidYear || month.isInvalidMonth || day.isInvalidDay(inYear: year, month: month) {
+    /// Creates a date from its components. If any of the componet value does
+    /// not exist in the calendar, fail the creation.
+    ///
+    /// - Parameters:
+    ///   - year: A year between 0000 and 9999.
+    ///   - month: A month between 1 and 12.
+    ///   - day: Day of the month.
+    public init?<Y, M, D>(year: Y, month: M, day: D)
+        where Y: SignedInteger, M: SignedInteger, D: SignedInteger
+    {
+        if year.isInvalidYear ||
+            month.isInvalidMonth ||
+            day.isInvalidDay(inYear: year, month: month)
+        {
             return nil
         }
 
@@ -40,10 +58,26 @@ public struct LocalDate: Equatable {
 }
 
 extension LocalDate {
+    /// Create a `LocalDate` from an date segement of an [RFC 3339][] timestamp.
+    /// Initialization will fail if the input does not comply with the format
+    /// specified in [RFC 3339][].
+    ///
+    /// [RFC 3339]: https://tools.ietf.org/html/rfc3339
+    ///
+    /// - Parameter rfc3339String: The date potion of a timestamp conforming to
+    ///                            the format specified in RFC 3339.
     public init?(rfc3339String: String) {
         self.init(asciiValues: Array(rfc3339String.utf8CString.dropLast()))
     }
 
+    /// Create a `LocalDate` from an date segement of an [RFC 3339][] timestamp.
+    /// An input that does not comply with [RFC 3339] will cause a trap in
+    /// runtime.
+    ///
+    /// [RFC 3339]: https://tools.ietf.org/html/rfc3339
+    ///
+    /// - Parameter rfc3339String: The date potion of a timestamp conforming to
+    ///                            the format specified in RFC 3339.
     public init(staticRFC3339String string: StaticString) {
         self.init(rfc3339String: string.description)!
     }
@@ -83,6 +117,7 @@ extension LocalDate {
 }
 
 extension LocalDate: CustomStringConvertible {
+    /// Serialized description of `LocalDate` in RFC 3339 format.
     public var description: String {
         let yearString: String
         if self.year < 10 {

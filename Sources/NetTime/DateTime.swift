@@ -1,9 +1,26 @@
+/// A moment in time. Represented in relation to UTC. The era is assumed to be
+/// the current era. Dates and time are in accordance to the Gregorian calendar.
+///
+/// This type is designed to preserves information as defined in [RFC 3339][] as
+/// much as poosible.
+///
+/// [RFC 3339]: https://tools.ietf.org/html/rfc3339
 public struct DateTime: Equatable {
+    /// Year, month, day potion of the moment.
     public var date: LocalDate
+    /// Hour, minute, second, sub-second potion of the moment.
     public var time: LocalTime
+    /// Time offset from the UTC time.
     public var utcOffset: TimeOffset
 
-    public init(date: LocalDate, time: LocalTime, utcOffset: TimeOffset = .zero) {
+    /// Create a `DateTime`.
+    ///
+    /// - Parameters:
+    ///   - date: The date potion of the moment.
+    ///   - time: The time potion of the moment.
+    ///   - utcOffset: The offset to UTC for the moment.
+    public init(date: LocalDate, time: LocalTime, utcOffset: TimeOffset = .zero)
+    {
         self.date = date
         self.time = time
         self.utcOffset = utcOffset
@@ -13,10 +30,25 @@ public struct DateTime: Equatable {
 extension DateTime: DateTimeRepresentable {}
 
 extension DateTime {
+    /// Create a `DateTime` from an [RFC 3339][] timestamp. Initialization will
+    /// fail if the input does not comply with the format specified in
+    /// [RFC 3339][].
+    ///
+    /// [RFC 3339]: https://tools.ietf.org/html/rfc3339
+    ///
+    /// - Parameter rfc3339String: A timestamp conforming to the format
+    ///                            specified in RFC 3339.
     public init?(rfc3339String: String) {
         self.init(asciiValues: Array(rfc3339String.utf8CString.dropLast()))
     }
 
+    /// Create a `DateTime` from an [RFC 3339][] timestamp. An input that does
+    /// not comply with [RFC 3339][] will cause a trap in runtime.
+    ///
+    /// [RFC 3339]: https://tools.ietf.org/html/rfc3339
+    ///
+    /// - Parameter staticRFC3339String: A timestamp conforming to the format
+    ///                                  specified in RFC 3339.
     public init(staticRFC3339String string: StaticString) {
         self.init(rfc3339String: string.description)!
     }
@@ -27,8 +59,11 @@ extension DateTime {
             || asciiValues.count > 26,
             let date = LocalDate(asciiValues: Array(asciiValues[0 ..< 10])),
             let time = LocalTime(asciiValues: Array(asciiValues[11...])),
-            case let timezoneStart = time.secondFraction.count + 19 + (time.secondFraction.isEmpty ? 0 : 1),
-            let offset = TimeOffset(asciiValues: Array(asciiValues[timezoneStart...]))
+            case let timezoneStart = time.secondFraction.count
+                + 19
+                + (time.secondFraction.isEmpty ? 0 : 1),
+            let offset = TimeOffset(
+                asciiValues: Array(asciiValues[timezoneStart...]))
         else
         {
             return nil
@@ -40,6 +75,7 @@ extension DateTime {
 }
 
 extension DateTime: CustomStringConvertible {
+    /// Serialized description of `DateTime` in RFC 3339 format.
     public var description: String {
         return "\(self.date)T\(self.time)\(self.utcOffset)"
     }
@@ -52,6 +88,8 @@ import Darwin
 #endif
 
 extension DateTime {
+    /// Number of seconds, including as much sub-second precesion as possible,
+    /// from 1970-01-01 00:00:00+00:00.
     public var timeIntervalSince1970: Double {
         var time = tm()
         time.tm_year = Int32(self.year - 1900)
