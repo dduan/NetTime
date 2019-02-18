@@ -23,3 +23,49 @@ test-docker:
 
 develop-docker:
 	@Scripts/develop-linux-docker.sh
+
+install-%:
+	true
+
+install-carthage:
+	brew remove carthage --force || true
+	brew install carthage
+
+test-SwiftPM: test
+
+test-iOS:
+	set -o pipefail && \
+		xcodebuild \
+		-project NetTime.xcodeproj \
+		-scheme NetTime \
+		-configuration Release \
+		-destination "name=iPhone X,OS=12.1" \
+		test
+
+test-macOS:
+	set -o pipefail && \
+		xcodebuild \
+		-project NetTime.xcodeproj \
+		-scheme NetTime \
+		-configuration Release \
+		test \
+
+test-tvOS:
+	set -o pipefail && \
+		xcodebuild \
+		-project NetTime.xcodeproj \
+		-scheme NetTime \
+		-configuration Release \
+		-destination "platform=tvOS Simulator,name=Apple TV,OS=12.1" \
+		test \
+
+test-carthage:
+	set -o pipefail && \
+		carthage build \
+		--no-skip-current \
+		--configuration Release \
+		--verbose
+	ls Carthage/build/Mac/NetTime.framework
+	ls Carthage/build/iOS/NetTime.framework
+	ls Carthage/build/tvOS/NetTime.framework
+	ls Carthage/build/watchOS/NetTime.framework
