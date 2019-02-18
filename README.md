@@ -16,6 +16,7 @@ specified in [RFC 3339][].
 let date = DateTime(staticRFC3339String: "1979-05-27T00:32:00.999999-07:00")
 // Original representation is preserved. For example:
 date.time.secondFraction // [9, 9, 9, 9, 9, 9]
+// Serialize back to RFC 3339 timestamp.
 date.description // 1979-05-27T00:32:00.999999-07:00
 
 // Use it with Foundation:
