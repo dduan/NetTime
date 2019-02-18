@@ -31,8 +31,8 @@ install-CocoaPods:
 	sudo gem install cocoapods -v 1.6.0
 
 install-carthage:
-	brew remove carthage --force || true
-	brew install carthage
+	brew update
+	brew outdated carthage || brew upgrade carthage
 
 test-SwiftPM: test
 
