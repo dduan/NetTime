@@ -2,6 +2,6 @@
 
 command -v docker &> /dev/null || { echo >&2 "Install docker https://www.docker.com"; exit 1; }
 
-IMAGE=norionomura/swift:swift-5.0-branch@sha256:165d082f63ec992b88859dc6d1c9e2a05cbf24a11a3f5c4816039d8a968d9763
+IMAGE=swift@sha256:dd9004042a308eccdf1d6dc960b6ad3b3006c1062eb460d2e62001c35e21f518
 NAME=nettimedev
 docker run -it -v "$PWD":/NetTime --name "$NAME" --rm "$IMAGE"
