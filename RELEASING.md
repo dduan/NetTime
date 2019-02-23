@@ -11,7 +11,7 @@
 - Push all changes and tag to GitHub and make a pull request.
 - Make sure CI is green.
 - Test the PR branch with a SwiftPM project using NetTime.
-- Merge the PR.
+- Merge the PR. Make sure the version tag is preserved when this happens.
 - Create a GitHub release from the new version tag. Paste in content of
-- corresponding change log. Upload `NetTime.framework.zip` as part of the release.
+  corresponding change log. Upload `NetTime.framework.zip` as part of the release.
 - Run `pod trunk push`.
