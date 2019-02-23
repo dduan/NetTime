@@ -80,7 +80,18 @@ extension TimeOffset {
         self.init(rfc3339String: string.description)!
     }
 
-    init?(asciiValues: [Int8]) {
+    /// Create an `Offset` from an offset segement of an [RFC 3339][] timestamp.
+    /// Initialization will fail if the input does not comply with the format
+    /// specified in [RFC 3339][].
+    ///
+    /// [RFC 3339]: https://tools.ietf.org/html/rfc3339
+    ///
+    /// - Parameter rfc3339String: The offset potion of a timestamp conforming
+    ///                            to the format specified in RFC 3339. The
+    ///                            content should be the same as argument of
+    ///                            `init(rfc3339String:)`. Terminating `0` value
+    ///                            from C strings should be excluded.
+    public init?(asciiValues: [CChar]) {
         if asciiValues.count == 1,
             let first = asciiValues.first,
             first == z || first == Z
