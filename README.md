@@ -59,7 +59,7 @@ github "lyft/mapper"
 #### With [SwiftPM](https://swift.org/package-manager)
 
 ```
-.package(url: "http://github.com/dduan/NetTime", from: "0.0.3")
+.package(url: "http://github.com/dduan/NetTime", from: "0.0.4")
 ```
 
 ## Caution
