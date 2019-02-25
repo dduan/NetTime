@@ -47,13 +47,13 @@ seconds was? Tough luck. NetTime preserves all information in an RFC
 ```ruby
 use_frameworks!
 
-pod "ModelMapper"
+pod "NetTime"
 ```
 
 #### With [Carthage](https://github.com/Carthage/Carthage)
 
 ```
-github "lyft/mapper"
+github "dduan/NetTime"
 ```
 
 #### With [SwiftPM](https://swift.org/package-manager)
