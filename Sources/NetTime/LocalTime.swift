@@ -91,7 +91,7 @@ extension LocalTime {
     ///                            should be the same as argument of
     ///                            `init(rfc3339String:)`. Terminating `0` value
     ///                            from C strings should be excluded.
-    public init?(asciiValues: [CChar]) {
+    public init?<S>(asciiValues: S) where S: RandomAccessCollection, S.Element == CChar, S.Index == Int {
         guard asciiValues.count >= 8, asciiValues[2] == colon && asciiValues[5] == colon else  {
             return nil
         }

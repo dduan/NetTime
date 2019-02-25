@@ -61,7 +61,7 @@ extension LocalDateTime {
     ///                            as argument of `init(rfc3339String:)`.
     ///                            Terminating `0` value from C strings should
     ///                            be excluded.
-    public init?(asciiValues: [CChar]) {
+    public init?<S>(asciiValues: S) where S: RandomAccessCollection, S.Element == CChar, S.Index == Int {
         guard asciiValues.count >= 19,
             case let separator = asciiValues[10],
             (separator == T || separator == t || separator == space),
