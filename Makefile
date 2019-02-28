@@ -27,7 +27,7 @@ carthage-archive: clean-carthage install-carthage
 clean-carthage:
 	@echo "Deleting Carthage artifacts…"
 	@rm -rf Carthage
-	@rm -rf Pathos.framework.zip
+	@rm -rf NetTime.framework.zip
 
 install-%:
 	true
