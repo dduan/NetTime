@@ -34,11 +34,11 @@ and timezones. But sometimes it's legitimate to ignore this problem. That's why
 representing and using date and time in Internet protocols." Suffice to say,
 _consistency and interoperability_ [goes beyond internet protocols][TOML Date].
 
-Further, converting a date string into a `TimeInterval` (`Double`) is
-a destructive operation: the original time representation is lost. Want to know
-what timezone offset was used? what the intended precesion for the fraction of
-seconds was? Tough luck. NetTime preserves all information in an RFC
-3339-compliant timestamp.
+Further, converting a timestamp to a in-memory object such as `TimeInterval` or
+a `Foundation.Date` a destructive operation: the original time representation is
+lost. Want to know what timezone offset was used? what the intended precesion
+for the fraction of seconds was? Tough luck. NetTime preserves all information
+in an RFC 3339-compliant timestamp.
 
 ## Installation
 
