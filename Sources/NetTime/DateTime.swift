@@ -5,7 +5,7 @@
 /// much as poosible.
 ///
 /// [RFC 3339]: https://tools.ietf.org/html/rfc3339
-public struct DateTime: Equatable {
+public struct DateTime: Equatable, Codable {
     /// Year, month, day potion of the moment.
     public var date: LocalDate
     /// Hour, minute, second, sub-second potion of the moment.

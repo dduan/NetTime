@@ -17,7 +17,7 @@ extension SignedInteger {
 }
 
 /// A time in Gregorian calendar, not specific to any timezone.
-public struct LocalTime: Equatable {
+public struct LocalTime: Equatable, Codable {
     /// The hour in 24-hour format.
     public var hour: Int8
     /// The minute.

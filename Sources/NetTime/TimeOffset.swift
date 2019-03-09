@@ -3,9 +3,9 @@
 /// [RFC 3339][].
 ///
 /// [RFC 3339]: https://tools.ietf.org/html/rfc3339
-public struct TimeOffset: Equatable {
+public struct TimeOffset: Equatable, Codable {
     /// Represents sign for the offset.
-    public enum Sign: Equatable {
+    public enum Sign: Int, Equatable, Codable {
         case plus
         case minus
     }
