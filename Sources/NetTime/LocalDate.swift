@@ -26,7 +26,7 @@ extension SignedInteger {
 }
 
 /// A date in Gregorian calendar, not specific to any timezone.
-public struct LocalDate: Equatable {
+public struct LocalDate: Equatable, Codable {
     /// The year.
     public var year: Int16
     /// The month.

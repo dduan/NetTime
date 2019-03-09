@@ -59,7 +59,7 @@ github "dduan/NetTime"
 #### With [SwiftPM](https://swift.org/package-manager)
 
 ```
-.package(url: "http://github.com/dduan/NetTime", from: "0.1.0")
+.package(url: "http://github.com/dduan/NetTime", from: "0.1.1")
 ```
 
 ## Caution
