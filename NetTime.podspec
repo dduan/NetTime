@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                      = "NetTime"
-  spec.version                   = "0.1.1"
+  spec.version                   = "0.2.1"
   spec.summary                   = "RFC 3339 compliant date/time data types."
   spec.homepage                  = "https://github.com/dduan/NetTime"
   spec.license                   = { :type => "MIT", :file => "LICENSE.md" }
