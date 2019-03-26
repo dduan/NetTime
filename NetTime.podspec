@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name                      = "NetTime"
-  spec.version                   = "0.1.1"
+  spec.version                   = "0.2.1"
   spec.summary                   = "RFC 3339 compliant date/time data types."
   spec.homepage                  = "https://github.com/dduan/NetTime"
   spec.license                   = { :type => "MIT", :file => "LICENSE.md" }
@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.osx.deployment_target     = "10.10"
   spec.tvos.deployment_target    = "9.0"
   spec.watchos.deployment_target = "2.0"
-  spec.swift_version             = '4.2.1'
+  spec.swift_version             = '5.0'
   spec.source                    = { :git => "https://github.com/dduan/NetTime.git", :tag => "#{spec.version}" }
   spec.source_files              = "Sources/**/*.swift"
   spec.requires_arc              = true
