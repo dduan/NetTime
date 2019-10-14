@@ -33,7 +33,7 @@ install-%:
 	true
 
 install-CocoaPods:
-	sudo gem install cocoapods -v 1.6.0
+	sudo gem install cocoapods -v 1.8.3
 
 install-carthage:
 	brew update
@@ -47,7 +47,7 @@ test-iOS:
 		-project NetTime.xcodeproj \
 		-scheme NetTime \
 		-configuration Release \
-		-destination "name=iPhone X,OS=12.2" \
+		-destination "name=iPhone 11,OS=13.1" \
 		test
 
 test-macOS:
@@ -64,7 +64,7 @@ test-tvOS:
 		-project NetTime.xcodeproj \
 		-scheme NetTime \
 		-configuration Release \
-		-destination "platform=tvOS Simulator,name=Apple TV,OS=12.2" \
+		-destination "platform=tvOS Simulator,name=Apple TV,OS=13.0" \
 		test \
 
 test-carthage:
