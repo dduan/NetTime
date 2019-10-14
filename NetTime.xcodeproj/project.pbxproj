@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3718F7B123540FD100D47812 /* NetTime_Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3718F7B023540FD100D47812 /* NetTime_Debug.xcconfig */; };
+		3718F7B32354101000D47812 /* NetTime_Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3718F7B22354101000D47812 /* NetTime_Release.xcconfig */; };
 		37D5B8E2221A3C5B004E086E /* NetTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D5B8D8221A3C5B004E086E /* NetTime.framework */; };
 		37D5B8FB221A3CB3004E086E /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B8F4221A3CB3004E086E /* constants.swift */; };
 		37D5B8FC221A3CB3004E086E /* TimeOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B8F5221A3CB3004E086E /* TimeOffset.swift */; };
@@ -34,8 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3718F7B023540FD100D47812 /* NetTime_Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = NetTime_Debug.xcconfig; sourceTree = "<group>"; };
+		3718F7B22354101000D47812 /* NetTime_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = NetTime_Release.xcconfig; sourceTree = "<group>"; };
 		37D5B8D8221A3C5B004E086E /* NetTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		37D5B8E1221A3C5B004E086E /* NetTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37D5B8E1221A3C5B004E086E /* .xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = .xctest; path = NetTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D5B8F4221A3CB3004E086E /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		37D5B8F5221A3CB3004E086E /* TimeOffset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeOffset.swift; sourceTree = "<group>"; };
 		37D5B8F6221A3CB3004E086E /* LocalTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalTime.swift; sourceTree = "<group>"; };
@@ -51,7 +55,6 @@
 		37D5B90A221A3CC1004E086E /* XCTestManifests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		37D5B914221A3CD9004E086E /* UniversalFramework_Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Framework.xcconfig; sourceTree = "<group>"; };
 		37D5B915221A3CD9004E086E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		37D5B916221A3CD9004E086E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		37D5B917221A3CD9004E086E /* UniversalFramework_Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Base.xcconfig; sourceTree = "<group>"; };
 		37D5B918221A3CD9004E086E /* UniversalFramework_Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Test.xcconfig; sourceTree = "<group>"; };
 		37D5B919221A3CD9004E086E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				37D5B8D8221A3C5B004E086E /* NetTime.framework */,
-				37D5B8E1221A3C5B004E086E /* NetTimeTests.xctest */,
+				37D5B8E1221A3C5B004E086E /* .xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,9 +155,10 @@
 			children = (
 				37D5B914221A3CD9004E086E /* UniversalFramework_Framework.xcconfig */,
 				37D5B915221A3CD9004E086E /* LICENSE */,
-				37D5B916221A3CD9004E086E /* README.md */,
 				37D5B917221A3CD9004E086E /* UniversalFramework_Base.xcconfig */,
 				37D5B918221A3CD9004E086E /* UniversalFramework_Test.xcconfig */,
+				3718F7B023540FD100D47812 /* NetTime_Debug.xcconfig */,
+				3718F7B22354101000D47812 /* NetTime_Release.xcconfig */,
 			);
 			path = xcconfigs;
 			sourceTree = "<group>";
@@ -205,7 +209,7 @@
 			);
 			name = NetTimeTests;
 			productName = NetTimeTests;
-			productReference = 37D5B8E1221A3C5B004E086E /* NetTimeTests.xctest */;
+			productReference = 37D5B8E1221A3C5B004E086E /* .xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -250,6 +254,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3718F7B123540FD100D47812 /* NetTime_Debug.xcconfig in Resources */,
+				3718F7B32354101000D47812 /* NetTime_Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,50 +310,26 @@
 		37D5B8D1221A3C20004E086E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ONLY_ACTIVE_ARCH = YES;
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		37D5B8D2221A3C20004E086E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		37D5B8EA221A3C5B004E086E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37D5B914221A3CD9004E086E /* UniversalFramework_Framework.xcconfig */;
+			baseConfigurationReference = 3718F7B023540FD100D47812 /* NetTime_Debug.xcconfig */;
 			buildSettings = {
-				DEFINES_MODULE = YES;
-				INFOPLIST_FILE = Resources/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = ca.duan.NetTime;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 			};
 			name = Debug;
 		};
 		37D5B8EB221A3C5B004E086E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37D5B914221A3CD9004E086E /* UniversalFramework_Framework.xcconfig */;
+			baseConfigurationReference = 3718F7B22354101000D47812 /* NetTime_Release.xcconfig */;
 			buildSettings = {
-				DEFINES_MODULE = YES;
-				INFOPLIST_FILE = Resources/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = ca.duan.NetTime;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 			};
 			name = Release;
 		};
@@ -355,9 +337,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37D5B918221A3CD9004E086E /* UniversalFramework_Test.xcconfig */;
 			buildSettings = {
-				PRODUCT_BUNDLE_IDENTIFIER = ca.duan.NetTimeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -365,10 +344,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37D5B918221A3CD9004E086E /* UniversalFramework_Test.xcconfig */;
 			buildSettings = {
-				PRODUCT_BUNDLE_IDENTIFIER = ca.duan.NetTimeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
