@@ -16,10 +16,7 @@ test:
 	@swift test -Xswiftc -warnings-as-errors
 
 test-docker:
-	@Scripts/run-tests-linux-docker.sh
-
-develop-docker:
-	@Scripts/develop-linux-docker.sh
+	@Scripts/ubuntu.sh NetTime test 5.1.1 bionic
 
 carthage-archive: clean-carthage install-carthage
 	@carthage build --archive
