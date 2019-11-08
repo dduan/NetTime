@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37D5B8D7221A3C5B004E086E"
+               BlueprintIdentifier = "61771B2272A3A6E32B3FDD27"
                BuildableName = "NetTime.framework"
                BlueprintName = "NetTime"
                ReferencedContainer = "container:NetTime.xcodeproj">
@@ -26,28 +26,35 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      onlyGenerateCoverageForSpecifiedTargets = "NO"
       shouldUseLaunchSchemeArgsEnv = "YES">
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "37D5B8D7221A3C5B004E086E"
-            BuildableName = "NetTime.framework"
-            BlueprintName = "NetTime"
-            ReferencedContainer = "container:NetTime.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37D5B8E0221A3C5B004E086E"
+               BlueprintIdentifier = "A1D05502BDB3BE7BC5F1B9E9"
                BuildableName = "NetTimeTests.xctest"
                BlueprintName = "NetTimeTests"
                ReferencedContainer = "container:NetTime.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "61771B2272A3A6E32B3FDD27"
+            BuildableName = "NetTime.framework"
+            BlueprintName = "NetTime"
+            ReferencedContainer = "container:NetTime.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <CommandLineArguments>
+      </CommandLineArguments>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <CodeCoverageTargets>
+      </CodeCoverageTargets>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -62,12 +69,16 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "37D5B8D7221A3C5B004E086E"
+            BlueprintIdentifier = "61771B2272A3A6E32B3FDD27"
             BuildableName = "NetTime.framework"
             BlueprintName = "NetTime"
             ReferencedContainer = "container:NetTime.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <CommandLineArguments>
+      </CommandLineArguments>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,15 +86,18 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "37D5B8D7221A3C5B004E086E"
+            BlueprintIdentifier = "61771B2272A3A6E32B3FDD27"
             BuildableName = "NetTime.framework"
             BlueprintName = "NetTime"
             ReferencedContainer = "container:NetTime.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
+      <CommandLineArguments>
+      </CommandLineArguments>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -1,0 +1,25 @@
+name: NetTime
+targets:
+  NetTime:
+    type: framework
+    platform: macOS
+    settings:
+      INFOPLIST_FILE: Resources/Info.plist
+    configFiles:
+      Debug: Resources/xcconfigs/NetTime_Debug.xcconfig
+      Release: Resources/xcconfigs/NetTime_Release.xcconfig
+    sources: Sources/NetTime/
+    scheme:
+      testTargets:
+        - NetTimeTests
+  NetTimeTests:
+    type: bundle.unit-test
+    codeSign: false
+    platform: macOS
+    sources:
+      - Tests/NetTimeTests/
+    dependencies:
+      - target: NetTime
+    configFiles:
+      Debug: Resources/xcconfigs/UniversalFramework_Test.xcconfig
+      Release: Resources/xcconfigs/UniversalFramework_Test.xcconfig
