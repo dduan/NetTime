@@ -3,187 +3,151 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3718F7B123540FD100D47812 /* NetTime_Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3718F7B023540FD100D47812 /* NetTime_Debug.xcconfig */; };
-		3718F7B32354101000D47812 /* NetTime_Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3718F7B22354101000D47812 /* NetTime_Release.xcconfig */; };
-		37D5B8E2221A3C5B004E086E /* NetTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37D5B8D8221A3C5B004E086E /* NetTime.framework */; };
-		37D5B8FB221A3CB3004E086E /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B8F4221A3CB3004E086E /* constants.swift */; };
-		37D5B8FC221A3CB3004E086E /* TimeOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B8F5221A3CB3004E086E /* TimeOffset.swift */; };
-		37D5B8FD221A3CB3004E086E /* LocalTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B8F6221A3CB3004E086E /* LocalTime.swift */; };
-		37D5B8FE221A3CB3004E086E /* LocalDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B8F7221A3CB3004E086E /* LocalDate.swift */; };
-		37D5B8FF221A3CB3004E086E /* LocalDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B8F8221A3CB3004E086E /* LocalDateTime.swift */; };
-		37D5B900221A3CB3004E086E /* DateTimeRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B8F9221A3CB3004E086E /* DateTimeRepresentable.swift */; };
-		37D5B901221A3CB3004E086E /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B8FA221A3CB3004E086E /* DateTime.swift */; };
-		37D5B90C221A3CC1004E086E /* TimeOffsetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B905221A3CC1004E086E /* TimeOffsetTests.swift */; };
-		37D5B90D221A3CC1004E086E /* DateTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B906221A3CC1004E086E /* DateTimeTests.swift */; };
-		37D5B90E221A3CC1004E086E /* LocalTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B907221A3CC1004E086E /* LocalTimeTests.swift */; };
-		37D5B90F221A3CC1004E086E /* LocalDateTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B908221A3CC1004E086E /* LocalDateTimeTests.swift */; };
-		37D5B910221A3CC1004E086E /* LocalDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B909221A3CC1004E086E /* LocalDateTests.swift */; };
-		37D5B911221A3CC1004E086E /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D5B90A221A3CC1004E086E /* XCTestManifests.swift */; };
+		03D1F536C9FBF9D91652EE9A /* DateTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA0480CE6804CF1EC4B6B82 /* DateTimeTests.swift */; };
+		1DB4D208B8A2AEABEBB4F024 /* LocalDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1812BD31365DEA68B5AC6B /* LocalDateTests.swift */; };
+		3F8ED06DFC18BDF20773E512 /* NetTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCEA71AE80D99965EACB546 /* NetTime.framework */; };
+		46F2E2CF9994A1C9E5D94D7F /* DateTimeRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10E7E5C3D9FE1110B8D16DE /* DateTimeRepresentable.swift */; };
+		6BA91080EF06B3820B0AA467 /* LocalDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B061AFA0B5A1010A0ED27 /* LocalDate.swift */; };
+		7F744F38BCD4FE007485C6E1 /* NetTime.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCEA71AE80D99965EACB546 /* NetTime.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8247E2C8ECB85072DF317ACF /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6AF4D83663E1A093DBF20A /* DateTime.swift */; };
+		90B5748050E1A8A287530A7A /* LocalTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8204920286950E0B856B1BF /* LocalTimeTests.swift */; };
+		935C5EA5738E6241AB27B33F /* TimeOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06D10F722CD730357E987F6 /* TimeOffset.swift */; };
+		93DAE42F4C8B38AF091873EA /* LocalDateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0B614255A97E85C2ED8F06 /* LocalDateTime.swift */; };
+		A0671CBCF20D4170D5003AC5 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FEBCC084743214E58E1052 /* constants.swift */; };
+		B022547B10F72971834E5E73 /* LocalTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B27206A37B457D9F9A240 /* LocalTime.swift */; };
+		C20A5D7A9976709CE07C4260 /* LocalDateTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8AE4943EDF9470C6758A28 /* LocalDateTimeTests.swift */; };
+		C2CC7AD88325073ECD6C83A9 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41A447765EEE709EF1C92A0 /* XCTestManifests.swift */; };
+		C72DEE2AD0BEE1BA5EFECE90 /* TimeOffsetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533506993062CCED0489A0EC /* TimeOffsetTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		37D5B8E3221A3C5B004E086E /* PBXContainerItemProxy */ = {
+		1203A929F61FEB1932E47EE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 37D5B8CD221A3C20004E086E /* Project object */;
+			containerPortal = FEBC145BC96DDE9D926EE93A /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 37D5B8D7221A3C5B004E086E;
+			remoteGlobalIDString = 61771B2272A3A6E32B3FDD27;
 			remoteInfo = NetTime;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3EA1F7AFE586851949582B69 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7F744F38BCD4FE007485C6E1 /* NetTime.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		3718F7B023540FD100D47812 /* NetTime_Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = NetTime_Debug.xcconfig; sourceTree = "<group>"; };
-		3718F7B22354101000D47812 /* NetTime_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = NetTime_Release.xcconfig; sourceTree = "<group>"; };
-		37D5B8D8221A3C5B004E086E /* NetTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		37D5B8E1221A3C5B004E086E /* .xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = .xctest; path = NetTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		37D5B8F4221A3CB3004E086E /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
-		37D5B8F5221A3CB3004E086E /* TimeOffset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeOffset.swift; sourceTree = "<group>"; };
-		37D5B8F6221A3CB3004E086E /* LocalTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalTime.swift; sourceTree = "<group>"; };
-		37D5B8F7221A3CB3004E086E /* LocalDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDate.swift; sourceTree = "<group>"; };
-		37D5B8F8221A3CB3004E086E /* LocalDateTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDateTime.swift; sourceTree = "<group>"; };
-		37D5B8F9221A3CB3004E086E /* DateTimeRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeRepresentable.swift; sourceTree = "<group>"; };
-		37D5B8FA221A3CB3004E086E /* DateTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
-		37D5B905221A3CC1004E086E /* TimeOffsetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeOffsetTests.swift; sourceTree = "<group>"; };
-		37D5B906221A3CC1004E086E /* DateTimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeTests.swift; sourceTree = "<group>"; };
-		37D5B907221A3CC1004E086E /* LocalTimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalTimeTests.swift; sourceTree = "<group>"; };
-		37D5B908221A3CC1004E086E /* LocalDateTimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDateTimeTests.swift; sourceTree = "<group>"; };
-		37D5B909221A3CC1004E086E /* LocalDateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalDateTests.swift; sourceTree = "<group>"; };
-		37D5B90A221A3CC1004E086E /* XCTestManifests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		37D5B914221A3CD9004E086E /* UniversalFramework_Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Framework.xcconfig; sourceTree = "<group>"; };
-		37D5B915221A3CD9004E086E /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		37D5B917221A3CD9004E086E /* UniversalFramework_Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Base.xcconfig; sourceTree = "<group>"; };
-		37D5B918221A3CD9004E086E /* UniversalFramework_Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Test.xcconfig; sourceTree = "<group>"; };
-		37D5B919221A3CD9004E086E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08D03D9D5737FA7C63FFED7B /* NetTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E0B614255A97E85C2ED8F06 /* LocalDateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDateTime.swift; sourceTree = "<group>"; };
+		479F226F01106ECC54C1DC45 /* NetTime_Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = NetTime_Release.xcconfig; sourceTree = "<group>"; };
+		533506993062CCED0489A0EC /* TimeOffsetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOffsetTests.swift; sourceTree = "<group>"; };
+		618401553AD5DAFDC2A5BB76 /* NetTime_Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = NetTime_Debug.xcconfig; sourceTree = "<group>"; };
+		6B3B27206A37B457D9F9A240 /* LocalTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTime.swift; sourceTree = "<group>"; };
+		6FA0480CE6804CF1EC4B6B82 /* DateTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeTests.swift; sourceTree = "<group>"; };
+		7DCEA71AE80D99965EACB546 /* NetTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C1812BD31365DEA68B5AC6B /* LocalDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDateTests.swift; sourceTree = "<group>"; };
+		8C8AE4943EDF9470C6758A28 /* LocalDateTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDateTimeTests.swift; sourceTree = "<group>"; };
+		A10E7E5C3D9FE1110B8D16DE /* DateTimeRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeRepresentable.swift; sourceTree = "<group>"; };
+		B06D10F722CD730357E987F6 /* TimeOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOffset.swift; sourceTree = "<group>"; };
+		D2FEBCC084743214E58E1052 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		D41A447765EEE709EF1C92A0 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		DF6AF4D83663E1A093DBF20A /* DateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
+		E8DF644DAED5BEDC68FA160E /* UniversalFramework_Test.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = UniversalFramework_Test.xcconfig; sourceTree = "<group>"; };
+		F8204920286950E0B856B1BF /* LocalTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalTimeTests.swift; sourceTree = "<group>"; };
+		FD5B061AFA0B5A1010A0ED27 /* LocalDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		37D5B8D5221A3C5B004E086E /* Frameworks */ = {
+		8639002DC0A121902DA1CB08 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		37D5B8DE221A3C5B004E086E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				37D5B8E2221A3C5B004E086E /* NetTime.framework in Frameworks */,
+				3F8ED06DFC18BDF20773E512 /* NetTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37D5B8CC221A3C20004E086E = {
+		5EF08A55C31BBF2F0431B090 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37D5B8F2221A3CB3004E086E /* Sources */,
-				37D5B902221A3CC1004E086E /* Tests */,
-				37D5B912221A3CD9004E086E /* Resources */,
-				37D5B8D9221A3C5B004E086E /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		37D5B8D9221A3C5B004E086E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				37D5B8D8221A3C5B004E086E /* NetTime.framework */,
-				37D5B8E1221A3C5B004E086E /* .xctest */,
+				7DCEA71AE80D99965EACB546 /* NetTime.framework */,
+				08D03D9D5737FA7C63FFED7B /* NetTimeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		37D5B8F2221A3CB3004E086E /* Sources */ = {
+		935C7B20FF8B5DB23D493241 /* NetTimeTests */ = {
 			isa = PBXGroup;
 			children = (
-				37D5B8F3221A3CB3004E086E /* NetTime */,
+				6FA0480CE6804CF1EC4B6B82 /* DateTimeTests.swift */,
+				8C1812BD31365DEA68B5AC6B /* LocalDateTests.swift */,
+				8C8AE4943EDF9470C6758A28 /* LocalDateTimeTests.swift */,
+				F8204920286950E0B856B1BF /* LocalTimeTests.swift */,
+				533506993062CCED0489A0EC /* TimeOffsetTests.swift */,
+				D41A447765EEE709EF1C92A0 /* XCTestManifests.swift */,
 			);
-			path = Sources;
+			name = NetTimeTests;
+			path = Tests/NetTimeTests;
 			sourceTree = "<group>";
 		};
-		37D5B8F3221A3CB3004E086E /* NetTime */ = {
+		A8A678A497485FCE5106EEB7 /* NetTime */ = {
 			isa = PBXGroup;
 			children = (
-				37D5B8F4221A3CB3004E086E /* constants.swift */,
-				37D5B8F5221A3CB3004E086E /* TimeOffset.swift */,
-				37D5B8F6221A3CB3004E086E /* LocalTime.swift */,
-				37D5B8F7221A3CB3004E086E /* LocalDate.swift */,
-				37D5B8F8221A3CB3004E086E /* LocalDateTime.swift */,
-				37D5B8F9221A3CB3004E086E /* DateTimeRepresentable.swift */,
-				37D5B8FA221A3CB3004E086E /* DateTime.swift */,
+				D2FEBCC084743214E58E1052 /* constants.swift */,
+				DF6AF4D83663E1A093DBF20A /* DateTime.swift */,
+				A10E7E5C3D9FE1110B8D16DE /* DateTimeRepresentable.swift */,
+				FD5B061AFA0B5A1010A0ED27 /* LocalDate.swift */,
+				2E0B614255A97E85C2ED8F06 /* LocalDateTime.swift */,
+				6B3B27206A37B457D9F9A240 /* LocalTime.swift */,
+				B06D10F722CD730357E987F6 /* TimeOffset.swift */,
 			);
-			path = NetTime;
+			name = NetTime;
+			path = Sources/NetTime;
 			sourceTree = "<group>";
 		};
-		37D5B902221A3CC1004E086E /* Tests */ = {
+		AA70379C4A6008DF9B1E2BAA /* xcconfigs */ = {
 			isa = PBXGroup;
 			children = (
-				37D5B904221A3CC1004E086E /* NetTimeTests */,
+				618401553AD5DAFDC2A5BB76 /* NetTime_Debug.xcconfig */,
+				479F226F01106ECC54C1DC45 /* NetTime_Release.xcconfig */,
+				E8DF644DAED5BEDC68FA160E /* UniversalFramework_Test.xcconfig */,
 			);
-			path = Tests;
+			name = xcconfigs;
+			path = Resources/xcconfigs;
 			sourceTree = "<group>";
 		};
-		37D5B904221A3CC1004E086E /* NetTimeTests */ = {
+		C190CCAA7C4C6623A2E22114 = {
 			isa = PBXGroup;
 			children = (
-				37D5B905221A3CC1004E086E /* TimeOffsetTests.swift */,
-				37D5B906221A3CC1004E086E /* DateTimeTests.swift */,
-				37D5B907221A3CC1004E086E /* LocalTimeTests.swift */,
-				37D5B908221A3CC1004E086E /* LocalDateTimeTests.swift */,
-				37D5B909221A3CC1004E086E /* LocalDateTests.swift */,
-				37D5B90A221A3CC1004E086E /* XCTestManifests.swift */,
+				A8A678A497485FCE5106EEB7 /* NetTime */,
+				935C7B20FF8B5DB23D493241 /* NetTimeTests */,
+				AA70379C4A6008DF9B1E2BAA /* xcconfigs */,
+				5EF08A55C31BBF2F0431B090 /* Products */,
 			);
-			path = NetTimeTests;
-			sourceTree = "<group>";
-		};
-		37D5B912221A3CD9004E086E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				37D5B913221A3CD9004E086E /* xcconfigs */,
-				37D5B919221A3CD9004E086E /* Info.plist */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		37D5B913221A3CD9004E086E /* xcconfigs */ = {
-			isa = PBXGroup;
-			children = (
-				37D5B914221A3CD9004E086E /* UniversalFramework_Framework.xcconfig */,
-				37D5B915221A3CD9004E086E /* LICENSE */,
-				37D5B917221A3CD9004E086E /* UniversalFramework_Base.xcconfig */,
-				37D5B918221A3CD9004E086E /* UniversalFramework_Test.xcconfig */,
-				3718F7B023540FD100D47812 /* NetTime_Debug.xcconfig */,
-				3718F7B22354101000D47812 /* NetTime_Release.xcconfig */,
-			);
-			path = xcconfigs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		37D5B8D3221A3C5B004E086E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		37D5B8D7221A3C5B004E086E /* NetTime */ = {
+		61771B2272A3A6E32B3FDD27 /* NetTime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37D5B8EE221A3C5B004E086E /* Build configuration list for PBXNativeTarget "NetTime" */;
+			buildConfigurationList = 094FC29346B1B9E60B70EBB5 /* Build configuration list for PBXNativeTarget "NetTime" */;
 			buildPhases = (
-				37D5B8D3221A3C5B004E086E /* Headers */,
-				37D5B8D4221A3C5B004E086E /* Sources */,
-				37D5B8D5221A3C5B004E086E /* Frameworks */,
-				37D5B8D6221A3C5B004E086E /* Resources */,
+				0CE76F98B024C2D0887F3B4F /* Sources */,
 			);
 			buildRules = (
 			);
@@ -191,193 +155,167 @@
 			);
 			name = NetTime;
 			productName = NetTime;
-			productReference = 37D5B8D8221A3C5B004E086E /* NetTime.framework */;
+			productReference = 7DCEA71AE80D99965EACB546 /* NetTime.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		37D5B8E0221A3C5B004E086E /* NetTimeTests */ = {
+		A1D05502BDB3BE7BC5F1B9E9 /* NetTimeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37D5B8EF221A3C5B004E086E /* Build configuration list for PBXNativeTarget "NetTimeTests" */;
+			buildConfigurationList = 141FA59E7E4D4B240483BA17 /* Build configuration list for PBXNativeTarget "NetTimeTests" */;
 			buildPhases = (
-				37D5B8DD221A3C5B004E086E /* Sources */,
-				37D5B8DE221A3C5B004E086E /* Frameworks */,
-				37D5B8DF221A3C5B004E086E /* Resources */,
+				4C247CD454701047F4D51878 /* Sources */,
+				8639002DC0A121902DA1CB08 /* Frameworks */,
+				3EA1F7AFE586851949582B69 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				37D5B8E4221A3C5B004E086E /* PBXTargetDependency */,
+				5270CD6C65DA6ED87810F4B6 /* PBXTargetDependency */,
 			);
 			name = NetTimeTests;
 			productName = NetTimeTests;
-			productReference = 37D5B8E1221A3C5B004E086E /* .xctest */;
+			productReference = 08D03D9D5737FA7C63FFED7B /* NetTimeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		37D5B8CD221A3C20004E086E /* Project object */ = {
+		FEBC145BC96DDE9D926EE93A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
-				TargetAttributes = {
-					37D5B8D7221A3C5B004E086E = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1020;
-					};
-					37D5B8E0221A3C5B004E086E = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1020;
-					};
-				};
+				LastUpgradeCheck = 1020;
 			};
-			buildConfigurationList = 37D5B8D0221A3C20004E086E /* Build configuration list for PBXProject "NetTime" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = E5F91EDD59DA8B1979F60F3F /* Build configuration list for PBXProject "NetTime" */;
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				Base,
 				en,
 			);
-			mainGroup = 37D5B8CC221A3C20004E086E;
-			productRefGroup = 37D5B8D9221A3C5B004E086E /* Products */;
+			mainGroup = C190CCAA7C4C6623A2E22114;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37D5B8D7221A3C5B004E086E /* NetTime */,
-				37D5B8E0221A3C5B004E086E /* NetTimeTests */,
+				61771B2272A3A6E32B3FDD27 /* NetTime */,
+				A1D05502BDB3BE7BC5F1B9E9 /* NetTimeTests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		37D5B8D6221A3C5B004E086E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3718F7B123540FD100D47812 /* NetTime_Debug.xcconfig in Resources */,
-				3718F7B32354101000D47812 /* NetTime_Release.xcconfig in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		37D5B8DF221A3C5B004E086E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		37D5B8D4221A3C5B004E086E /* Sources */ = {
+		0CE76F98B024C2D0887F3B4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37D5B8FB221A3CB3004E086E /* constants.swift in Sources */,
-				37D5B8FC221A3CB3004E086E /* TimeOffset.swift in Sources */,
-				37D5B8FD221A3CB3004E086E /* LocalTime.swift in Sources */,
-				37D5B8FF221A3CB3004E086E /* LocalDateTime.swift in Sources */,
-				37D5B8FE221A3CB3004E086E /* LocalDate.swift in Sources */,
-				37D5B901221A3CB3004E086E /* DateTime.swift in Sources */,
-				37D5B900221A3CB3004E086E /* DateTimeRepresentable.swift in Sources */,
+				8247E2C8ECB85072DF317ACF /* DateTime.swift in Sources */,
+				46F2E2CF9994A1C9E5D94D7F /* DateTimeRepresentable.swift in Sources */,
+				6BA91080EF06B3820B0AA467 /* LocalDate.swift in Sources */,
+				93DAE42F4C8B38AF091873EA /* LocalDateTime.swift in Sources */,
+				B022547B10F72971834E5E73 /* LocalTime.swift in Sources */,
+				935C5EA5738E6241AB27B33F /* TimeOffset.swift in Sources */,
+				A0671CBCF20D4170D5003AC5 /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37D5B8DD221A3C5B004E086E /* Sources */ = {
+		4C247CD454701047F4D51878 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37D5B911221A3CC1004E086E /* XCTestManifests.swift in Sources */,
-				37D5B90E221A3CC1004E086E /* LocalTimeTests.swift in Sources */,
-				37D5B90D221A3CC1004E086E /* DateTimeTests.swift in Sources */,
-				37D5B910221A3CC1004E086E /* LocalDateTests.swift in Sources */,
-				37D5B90C221A3CC1004E086E /* TimeOffsetTests.swift in Sources */,
-				37D5B90F221A3CC1004E086E /* LocalDateTimeTests.swift in Sources */,
+				03D1F536C9FBF9D91652EE9A /* DateTimeTests.swift in Sources */,
+				1DB4D208B8A2AEABEBB4F024 /* LocalDateTests.swift in Sources */,
+				C20A5D7A9976709CE07C4260 /* LocalDateTimeTests.swift in Sources */,
+				90B5748050E1A8A287530A7A /* LocalTimeTests.swift in Sources */,
+				C72DEE2AD0BEE1BA5EFECE90 /* TimeOffsetTests.swift in Sources */,
+				C2CC7AD88325073ECD6C83A9 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		37D5B8E4221A3C5B004E086E /* PBXTargetDependency */ = {
+		5270CD6C65DA6ED87810F4B6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 37D5B8D7221A3C5B004E086E /* NetTime */;
-			targetProxy = 37D5B8E3221A3C5B004E086E /* PBXContainerItemProxy */;
+			target = 61771B2272A3A6E32B3FDD27 /* NetTime */;
+			targetProxy = 1203A929F61FEB1932E47EE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		37D5B8D1221A3C20004E086E /* Debug */ = {
+		0BD99EE337CE2DABA0C964D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		1F11A15D19DBE2ABB3D06660 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8DF644DAED5BEDC68FA160E /* UniversalFramework_Test.xcconfig */;
 			buildSettings = {
 			};
 			name = Debug;
 		};
-		37D5B8D2221A3C20004E086E /* Release */ = {
+		274E284ABBE1BC03241396BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 618401553AD5DAFDC2A5BB76 /* NetTime_Debug.xcconfig */;
 			buildSettings = {
-			};
-			name = Release;
-		};
-		37D5B8EA221A3C5B004E086E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3718F7B023540FD100D47812 /* NetTime_Debug.xcconfig */;
-			buildSettings = {
+				INFOPLIST_FILE = Resources/Info.plist;
 			};
 			name = Debug;
 		};
-		37D5B8EB221A3C5B004E086E /* Release */ = {
+		7FF8B340572E90E1403990FA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3718F7B22354101000D47812 /* NetTime_Release.xcconfig */;
+			baseConfigurationReference = E8DF644DAED5BEDC68FA160E /* UniversalFramework_Test.xcconfig */;
 			buildSettings = {
 			};
 			name = Release;
 		};
-		37D5B8EC221A3C5B004E086E /* Debug */ = {
+		9E90814E57991FE64DE0516B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37D5B918221A3CD9004E086E /* UniversalFramework_Test.xcconfig */;
+			baseConfigurationReference = 479F226F01106ECC54C1DC45 /* NetTime_Release.xcconfig */;
 			buildSettings = {
+				INFOPLIST_FILE = Resources/Info.plist;
+			};
+			name = Release;
+		};
+		ECD0A5955D2DBB390BEA7F98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = macosx;
 			};
 			name = Debug;
-		};
-		37D5B8ED221A3C5B004E086E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37D5B918221A3CD9004E086E /* UniversalFramework_Test.xcconfig */;
-			buildSettings = {
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		37D5B8D0221A3C20004E086E /* Build configuration list for PBXProject "NetTime" */ = {
+		094FC29346B1B9E60B70EBB5 /* Build configuration list for PBXNativeTarget "NetTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37D5B8D1221A3C20004E086E /* Debug */,
-				37D5B8D2221A3C20004E086E /* Release */,
+				274E284ABBE1BC03241396BE /* Debug */,
+				9E90814E57991FE64DE0516B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
 		};
-		37D5B8EE221A3C5B004E086E /* Build configuration list for PBXNativeTarget "NetTime" */ = {
+		141FA59E7E4D4B240483BA17 /* Build configuration list for PBXNativeTarget "NetTimeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37D5B8EA221A3C5B004E086E /* Debug */,
-				37D5B8EB221A3C5B004E086E /* Release */,
+				1F11A15D19DBE2ABB3D06660 /* Debug */,
+				7FF8B340572E90E1403990FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
 		};
-		37D5B8EF221A3C5B004E086E /* Build configuration list for PBXNativeTarget "NetTimeTests" */ = {
+		E5F91EDD59DA8B1979F60F3F /* Build configuration list for PBXProject "NetTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37D5B8EC221A3C5B004E086E /* Debug */,
-				37D5B8ED221A3C5B004E086E /* Release */,
+				ECD0A5955D2DBB390BEA7F98 /* Debug */,
+				0BD99EE337CE2DABA0C964D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 37D5B8CD221A3C20004E086E /* Project object */;
+	rootObject = FEBC145BC96DDE9D926EE93A /* Project object */;
 }
