@@ -23,7 +23,7 @@ endif
 test:
 	@swift test -Xswiftc -warnings-as-errors
 
-test-codegen: update-linux-test-manifest
+test-codegen: update-linux-test-manifest generate-xcodeproj
 	@git diff --exit-code
 
 test-docker:
