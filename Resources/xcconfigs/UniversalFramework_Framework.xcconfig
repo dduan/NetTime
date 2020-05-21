@@ -33,3 +33,4 @@ ENABLE_BITCODE[sdk=appletv*]                  = YES
 
 INFOPLIST_FILE = Resources/Info.plist
 PRODUCT_BUNDLE_IDENTIFIER = ca.duan.NetTime
+DYLIB_INSTALL_NAME_BASE = @rpath
