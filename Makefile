@@ -7,10 +7,6 @@ export LC_CTYPE     = en_US.UTF-8
 build: update-linux-test-manifest
 	@swift build -c release -Xswiftc -warnings-as-errors > /dev/null
 
-generate-xcodeproj:
-	@Scripts/ensure-xcodegen.sh
-	@tmp/xcodegen
-
 update-linux-test-manifest:
 ifeq ($(shell uname),Darwin)
 	@rm Tests/NetTimeTests/XCTestManifests.swift
@@ -23,7 +19,7 @@ endif
 test:
 	@swift test -Xswiftc -warnings-as-errors
 
-test-codegen: update-linux-test-manifest generate-xcodeproj
+test-codegen: update-linux-test-manifest
 	@git diff --exit-code
 
 test-docker:
