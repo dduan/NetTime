@@ -50,12 +50,6 @@ use_frameworks!
 pod "NetTime"
 ```
 
-#### With [Carthage](https://github.com/Carthage/Carthage)
-
-```
-github "dduan/NetTime"
-```
-
 #### With [SwiftPM](https://swift.org/package-manager)
 
 ```

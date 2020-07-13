@@ -29,62 +29,13 @@ test-codegen: update-linux-test-manifest generate-xcodeproj
 test-docker:
 	@Scripts/ubuntu.sh NetTime test 5.1.1 bionic
 
-carthage-archive: clean-carthage install-carthage
-	@carthage build --archive
-
-clean-carthage:
-	@echo "Deleting Carthage artifacts…"
-	@rm -rf Carthage
-	@rm -rf NetTime.framework.zip
-
 install-%:
 	true
 
 install-CocoaPods:
 	sudo gem install cocoapods -v 1.8.3
 
-install-carthage:
-	brew update
-	brew outdated carthage || brew upgrade carthage
-
 test-SwiftPM: test
-
-test-iOS:
-	set -o pipefail && \
-		xcodebuild \
-		-project NetTime.xcodeproj \
-		-scheme NetTime \
-		-configuration Release \
-		-destination "name=iPhone 11,OS=13.1" \
-		test
-
-test-macOS:
-	set -o pipefail && \
-		xcodebuild \
-		-project NetTime.xcodeproj \
-		-scheme NetTime \
-		-configuration Release \
-		test \
-
-test-tvOS:
-	set -o pipefail && \
-		xcodebuild \
-		-project NetTime.xcodeproj \
-		-scheme NetTime \
-		-configuration Release \
-		-destination "platform=tvOS Simulator,name=Apple TV,OS=13.0" \
-		test \
-
-test-carthage:
-	set -o pipefail && \
-		carthage build \
-		--no-skip-current \
-		--configuration Release \
-		--verbose
-	ls Carthage/build/Mac/NetTime.framework
-	ls Carthage/build/iOS/NetTime.framework
-	ls Carthage/build/tvOS/NetTime.framework
-	ls Carthage/build/watchOS/NetTime.framework
 
 test-CocoaPods:
 	pod lib lint --verbose
