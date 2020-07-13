@@ -9,12 +9,8 @@ jobs:
     strategy:
       matrix:
         action:
-          - carthage
           - CocoaPods
-          - iOS
-          - macOS
           - SwiftPM
-          - tvOS
     steps:
     - uses: actions/checkout@v1
     - name: Xcode version
