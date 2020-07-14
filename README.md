@@ -64,7 +64,7 @@ Never assume you know enough about timezones and/or calendars to format date
 string!
 
 [RFC 3339]: https://tools.ietf.org/html/rfc3339
-[TOML Date]: https://github.com/toml-lang/toml/blob/master/versions/en/toml-v0.5.0.md#offset-date-time
+[TOML Date]: https://toml.io/en/v1.0.0-rc.1#offset-date-time
 
 ## License
 
